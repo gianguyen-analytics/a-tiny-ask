@@ -136,7 +136,7 @@ yesBtn.addEventListener("click", function () {
     rel="noopener noreferrer"
     class="deal-btn"
 >
-    💌 Deal!
+    💌 Deal! nhắn choa anh 
 </a>
     `;
 
