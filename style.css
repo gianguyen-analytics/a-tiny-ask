@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "DM Sans", sans-serif;
+
+    background:
+        radial-gradient(circle at top left, #f7d9d6, transparent 40%),
+        radial-gradient(circle at bottom right, #f4cfc8, transparent 40%),
+        #f6e8e4;
+}
+
+/* CARD */
+
+.card {
+    width: 440px;
+    min-height: 520px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 28px;
+
+    padding: 48px 42px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 60px rgba(120, 70, 70, 0.15);
+
+    backdrop-filter: blur(10px);
+}
+
+/* A TINY ASK */
+
+.small-title {
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #777;
+
+    margin-bottom: 18px;
+}
+
+/* MAIN TITLE */
+
+h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 52px;
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    color: #242424;
+}
+
+h1 span {
+    color: #d65d55;
+    font-style: italic;
+}
+
+/* SMALL TEXT */
+
+.subtitle {
+    margin-top: 22px;
+
+    font-size: 14px;
+
+    color: #777;
+}
+
+/* FLOWER */
+
+.flower {
+    font-size: 75px;
+
+    margin: 30px 0;
+
+    animation: flowerMove 3s ease-in-out infinite;
+}
+
+@keyframes flowerMove {
+
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg) scale(1.05);
+    }
+}
+
+/* BUTTON AREA */
+
+.buttons {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    height: 62px;
+}
+
+/* YES BUTTON */
+
+#yesBtn {
+    flex: 1;
+
+    height: 58px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: #b9dcae;
+
+    color: #233122;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+#yesBtn:hover {
+    transform: scale(1.03);
+
+    background: #a9d39d;
+
+    box-shadow: 0 10px 25px rgba(80, 140, 80, 0.20);
+}
+
+/* NO BUTTON */
+
+#noBtn {
+    width: 70px;
+    height: 58px;
+
+    border: 1px solid #e3b3ae;
+    border-radius: 15px;
+
+    background: #fff;
+
+    color: #d65d55;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+/* MOBILE */
+
+@media (max-width: 520px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+        min-height: auto;
+
+        padding: 40px 25px;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    .flower {
+        font-size: 65px;
+    }
+}
+/* SUCCESS SCREEN */
+
+.success {
+    padding-top: 60px;
+}
+
+.success h1 {
+    color: #d65d55;
+}
+
+.celebrate {
+    font-size: 42px;
+    margin: 40px 0;
+}
+
+.success-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #444;
+}
+
+.date-text {
+    margin-top: 15px;
+    color: #888;
+}
+
+/* FALLING HEARTS */
+
+@keyframes fall {
+
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* DATE INFORMATION */
+
+.date-info {
+    margin-top: 30px;
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid #f0d8d4;
+    border-radius: 18px;
+
+    padding: 20px;
+}
+
+.date-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.date-item:last-child {
+    border-bottom: none;
+}
+
+.date-item span {
+    color: #888;
+    font-size: 14px;
+}
+
+.date-item strong {
+    color: #333;
+    font-size: 14px;
+
+    text-align: right;
+}
+#noBtn {
+    white-space: nowrap;
+    transition:
+        left 0.18s ease,
+        top 0.18s ease,
+        transform 0.2s ease;
+}
+
+#yesBtn {
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
