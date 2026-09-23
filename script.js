@@ -9,13 +9,12 @@ const card = document.querySelector(".card");
 let noCount = 0;
 
 const noTexts = [
-    "Really? 🤨",
-    "Think again 😌",
+    "Really? ",
     "Vân ơi 🙂",
-    "Nice try 😂",
-    "Still trying? 👀",
-    "Không cho bấm đâu 😏",
-    "Just say YES ❤️"
+    "Nice try ",
+    "Vẫn cố hả 👀",
+    "Không nha 😏",
+    "YES đi "
 ];
 
 function moveNoButton() {

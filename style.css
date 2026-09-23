@@ -314,99 +314,297 @@ h1 span {
 .deal-btn:active {
     transform: scale(0.97);
 }
-/* =========================
-   MOBILE FIX
-========================= */
+/* ========================================
+   MOBILE VERSION
+   ======================================== */
 
 @media (max-width: 520px) {
 
+    html,
     body {
-        padding: 16px;
-        min-height: 100dvh;
+        width: 100%;
+        min-height: 100%;
     }
+
+    body {
+        min-height: 100dvh;
+
+        padding: 14px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow-x: hidden;
+    }
+
+    /* CARD */
 
     .card {
         width: 100%;
-        max-width: 420px;
+        max-width: 390px;
 
-        padding: 32px 22px;
+        min-height: auto;
+
+        padding: 30px 20px 26px;
 
         border-radius: 24px;
+
+        box-shadow:
+            0 18px 45px rgba(120, 70, 70, 0.13);
     }
+
+    /* SMALL TITLE */
+
+    .small-title {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 15px;
+    }
+
+    /* MAIN TITLE */
 
     h1 {
-        font-size: 40px;
-        line-height: 1.05;
+        font-size: clamp(36px, 10vw, 44px);
+
+        line-height: 0.98;
+
+        margin: 0 auto;
     }
 
+    /* SUBTITLE */
+
     .subtitle {
-        font-size: 13px;
+        margin-top: 18px;
+
+        padding: 0 5px;
+
+        font-size: 12px;
         line-height: 1.5;
     }
 
-    /* YES */
+    /* FLOWER */
 
-    #yesBtn {
-        min-width: 0;
-        height: 56px;
+    .flower {
+        font-size: 55px;
 
-        font-size: 18px;
-        padding: 0 20px;
+        margin: 22px 0 25px;
     }
 
-    /* NO */
+    /* BUTTON AREA */
 
-    #noBtn {
-        width: auto;
-        min-width: 70px;
-        max-width: 180px;
+    .buttons {
+        width: 100%;
 
-        height: auto;
-        min-height: 56px;
+        height: 58px;
 
-        padding: 10px 14px;
-
-        font-size: 13px;
-        line-height: 1.2;
-
-        white-space: normal;
-        text-align: center;
-    }
-
-    /* DATE INFO */
-
-    .date-info {
-        padding: 15px;
-    }
-
-    .date-item {
         gap: 10px;
     }
 
-    .date-item span,
-    .date-item strong {
-        font-size: 12px;
+    /* YES BUTTON */
+
+    #yesBtn {
+        min-width: 0;
+
+        height: 56px;
+
+        padding: 0 18px;
+
+        border-radius: 14px;
+
+        font-size: 18px;
     }
+
+    /* NO BUTTON */
+
+    #noBtn {
+        width: auto;
+
+        min-width: 68px;
+        max-width: 155px;
+
+        min-height: 54px;
+        height: auto;
+
+        padding: 9px 12px;
+
+        border-radius: 14px;
+
+        font-size: 12px;
+        line-height: 1.15;
+
+        white-space: normal;
+
+        text-align: center;
+    }
+
+
+    /* ==========================
+       YES / SUCCESS SCREEN
+       ========================== */
+
+    .success {
+        padding-top: 5px;
+    }
+
+    .success h1 {
+        font-size: 42px;
+
+        line-height: 1;
+
+        margin-top: 5px;
+    }
+
+    .celebrate {
+        font-size: 29px;
+
+        margin: 22px 0;
+    }
+
+    .success-text {
+        font-size: 16px;
+
+        line-height: 1.4;
+
+        padding: 0 5px;
+    }
+
+    .date-text {
+        margin-top: 8px;
+
+        font-size: 13px;
+    }
+
+
+    /* DATE INFORMATION */
+
+    .date-info {
+        margin-top: 20px;
+
+        padding: 8px 14px;
+
+        border-radius: 16px;
+    }
+
+    .date-item {
+        min-height: 49px;
+
+        padding: 10px 0;
+
+        gap: 8px;
+    }
+
+    .date-item span {
+        flex: 0 0 40%;
+
+        font-size: 12px;
+
+        white-space: nowrap;
+    }
+
+    .date-item strong {
+        flex: 1;
+
+        font-size: 12px;
+        line-height: 1.25;
+
+        text-align: right;
+    }
+
 
     /* DEAL BUTTON */
 
     .deal-btn {
-        width: 100%;
+        display: flex;
 
-        padding: 14px 12px;
+        width: 100%;
+        min-height: 50px;
+
+        margin-top: 16px;
+
+        padding: 12px 14px;
+
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 14px;
 
         font-size: 14px;
+        line-height: 1.2;
 
         text-align: center;
+
         white-space: normal;
+    }
+}
+
+
+/* ========================================
+   EXTRA SMALL PHONES
+   ======================================== */
+
+@media (max-width: 360px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .card {
+        padding:
+            25px 16px
+            22px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .small-title {
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+    }
+
+    .flower {
+        font-size: 48px;
+
+        margin: 18px 0 22px;
+    }
+
+    #yesBtn {
+        font-size: 16px;
+    }
+
+    #noBtn {
+        max-width: 135px;
+
+        font-size: 11px;
+    }
+
+    .success h1 {
+        font-size: 36px;
     }
 
     .celebrate {
-        font-size: 32px;
-        margin: 25px 0;
+        font-size: 25px;
     }
 
-    .success {
-        padding-top: 20px;
+    .success-text {
+        font-size: 14px;
+    }
+
+    .date-item span,
+    .date-item strong {
+        font-size: 11px;
+    }
+
+    .deal-btn {
+        font-size: 13px;
     }
 }
