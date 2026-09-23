@@ -131,6 +131,14 @@ yesBtn.addEventListener("click", function () {
             </div>
 
         </div>
+      <a
+    href="https://www.instagram.com/aymer_.15/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="deal-btn"
+>
+    💌 Deal!
+</a>
     `;
 
     createHearts();
